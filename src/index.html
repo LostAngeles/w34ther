@@ -6,8 +6,10 @@
 	<link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">	
-	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 <body>
 
@@ -15,7 +17,7 @@
 		<div class="container">
 			<div class="topbar" id="topbar">
 				<div class="logo"><a href="index.html"><h1>Daily Weather</h1></a></div>
-				<div class="settings-button" onclick="openSettings()">
+				<div class="settings-button" id="settings-button"  onclick="openSettings()">
 					<div>Settings</div>
 					<i class="fas fa-ellipsis-v"></i>
 				</div>
@@ -36,6 +38,11 @@
 					<div class="setting-description active">Fahrenheit (F)</div>
 					<div class="setting-description active">Celsius (C) </div>
 				</div>
+				<div class="change">
+					<i class="fas fa-volume-up"></i>
+					<div class="setting-description active">Enable</div>
+					<div class="setting-description active">Disable</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -48,14 +55,34 @@
 				</div>
 				<div class="geolocation-side" id="geolocation-side">
 					<div class="title">Location Data</div>
+					<div id="map"></div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<footer></footer>
+	<script>
+		navigator.geolocation.getCurrentPosition(locationSuccess);
+
+		let lat;
+		let long;
+
+		function locationSuccess({ coords: { latitude, longitude } }) {		
+			lat = Math.floor(latitude * 100) / 100;
+			long = Math.floor(longitude * 100) / 100;	
+
+			mapboxgl.accessToken = 'pk.eyJ1Ijoibmlra2lodXNreSIsImEiOiJjazQyb2I5emEwMTBqM21wamRyNGFqbjhsIn0.4zKa56yt6D38p-rVO8I-PQ';
+			let map = new mapboxgl.Map({
+			container: 'map', // container id
+			style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+			center: [long, lat], // starting position [lng, lat]
+			zoom: 9 // starting zoom
+		});
 
 
-<script src="engine.js"></script>
+
+		}
+	</script>
+	<script src="app.js"></script>
 </body>
 </html>
