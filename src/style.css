@@ -133,6 +133,27 @@ a {
   align-items: center;
 }
 
+.weather-info {
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 9.5s;
+}
+
+#icon {
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 9.5s;
+}
+
+#temperature, #summary {
+ opacity: 0;
+ animation: show 3s 1; 
+ animation-fill-mode: forwards; 
+ animation-delay: 9s;
+}
+
 .weather-forecast-side:hover {
   background-color: rgba(75, 68, 83, .9);
 }
@@ -191,10 +212,6 @@ a {
   animation-fill-mode: forwards; 
   animation-delay: 9.5s;
   transition: opacity 1s;
-}
-
-#map:hover {
-  opacity: 1;
 }
 
 .display-flex {

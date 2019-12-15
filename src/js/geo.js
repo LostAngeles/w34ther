@@ -1,3 +1,6 @@
+import getSkycons from 'skycons';
+const Skycons = getSkycons(window);
+
 navigator.geolocation.getCurrentPosition(locationSuccess);
 
 export function locationSuccess({ coords: { latitude, longitude } }) { 
@@ -40,7 +43,7 @@ export function locationSuccess({ coords: { latitude, longitude } }) {
 			today = dd + '/' + mm + '/' + yyyy;
 			document.getElementById('current-date').innerHTML = today;
 
-			
+
 			function setIcons(icon, iconID) {
 				const skycons = new Skycons({color:"white"});
 				const currentIcon = icon.replace(/-/g, "_").toUpperCase();
@@ -48,7 +51,7 @@ export function locationSuccess({ coords: { latitude, longitude } }) {
 				return skycons.set(iconID, Skycons[currentIcon]);
 			}
 			setIcons(icon, document.getElementById('icon'));
-		})
+			})
 
 	}
 	getWeather();
