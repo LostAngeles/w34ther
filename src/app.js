@@ -2,6 +2,8 @@ import './style.css';
 import "./js/dom.js";
 import "./js/geo.js";
 import "./js/changeAppBackground.js";
+import "./js/current-time.js"; 
+
 
 const settingsExpand = document.getElementById('settings-expand');
 const settingsButton = document.getElementById('settings-button');

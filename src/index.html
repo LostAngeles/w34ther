@@ -6,18 +6,11 @@
 	<link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
-	
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>	
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">	
-
 </head>
 <body id="body">
-
-
-	
-
-
 	<header>
 		<div class="container">
 			<div class="topbar" id="topbar">
@@ -51,26 +44,35 @@
 			</div>
 		</div>
 	</header>
-
 	<section class="weather">
 		<div class="container">
 			<div class="weather-content">
 				<div class="weather-forecast-side" id="weather-forecast-side">
-					<div class="title">Weather Data</div>
-					<div id="temperature"></div>
-					<div id="summary"></div>
+					<div class="title">Hello!</div>
+					<div class="weather-details">
+						<div class="weather-info">						
+							<div id="timezone">LostAngeles</div>
+							<div id="current-date">Tuesday</div>
+							<div id="current-time">03:00AM</div>						
+						</div>
+						<div>
+							<div id="temperature">12</div>
+							<div id="summary">13</div>
+						</div>
+						<canvas id="icon" width="128" height="128"></canvas>
+					</div>
 				</div>				
 				<div class="geolocation-side" id="geolocation-side">
 					<div class="title">Geolocation</div>
-					<div>
-						<div id="Longitude"></div>
-						<div id="latitude "></div>
+					<div class="coords">
+						<div id="latitude"></div>
+						<div id="longitude"></div>
 					</div>
-					<div id="map"></div>
+					<div id="map"></div>					
 				</div>
 			</div>
 		</div>
 	</section>	
-	
+
 </body>
 </html>

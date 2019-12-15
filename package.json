@@ -11,7 +11,7 @@
 		"prettier": "prettier --write \"src/**/*.js\"",
 		"styleit": "stylelint src/**/*.css",
 		"styleit-fix": "stylelint src/**/*.css --fix",
-		 "all-fix": "npm run prettier && npm run styleit-fix && npm run lint-fix"
+		"all-fix": "npm run prettier && npm run styleit-fix && npm run lint-fix"
 	},
 	"author": "",
 	"license": "ISC",
@@ -43,5 +43,7 @@
 		"webpack-cli": "^3.3.10",
 		"webpack-dev-server": "^3.9.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"skycons": "^1.0.0"
+	}
 }

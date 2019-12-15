@@ -4,19 +4,19 @@
 } 
 
 body {
-  background: url(assets/images/original-wallpaper.jpg);	
+  background: url(assets/images/original-wallpaper-.jpg);	
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   color: black;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: #ffffff;
 }
 
 h1 {
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 20px;
   padding: 0px;
   margin: 0px;
 }
@@ -42,7 +42,7 @@ a {
   justify-content: space-between;
   overflow: hidden;
   width: 0px;
-  height: 25px;
+  height: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   transition: width 1.7s;
@@ -61,7 +61,7 @@ a {
   display: flex;
   cursor: pointer;
   opacity: 0;
-  line-height: 25px;
+  line-height: 20px;
   animation: show 3s 1; 
   animation-fill-mode: forwards; 
   animation-delay: 3.0s;  
@@ -78,7 +78,7 @@ a {
   height: 0px;
   margin-top: 10px;
   transition: 1s;
-  line-height: 25px;
+  line-height: 20px;
   background-color: rgba(75, 68, 83, .9);
   display: flex;
   justify-content: space-around;
@@ -125,8 +125,24 @@ a {
   background-color: rgba(75, 68, 83, .7);
 }
 
+.weather-details {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid cyan;
+  align-items: center;
+}
+
 .weather-forecast-side:hover {
   background-color: rgba(75, 68, 83, .9);
+}
+
+#temperature {
+  font-size: 50px;
+}
+
+#icon img{
+  width: 128px;
 }
 
 .geolocation-side {
@@ -153,16 +169,36 @@ a {
   animation-delay: 8.5s;
 }
 
+.coords {
+  padding-top: 20px;
+  display: flex;
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 9s;
+}
+
+#latitude {
+  padding-right: 10px;
+}
+
 #map {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 90%;
   height: 70%;
-  opacity: 0.7;
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 9.5s;
   transition: opacity 1s;
 }
 
 #map:hover {
   opacity: 1;
+}
+
+.display-flex {
+  display: flex;
 }
 
 @keyframes show {
@@ -176,8 +212,3 @@ a {
   }
 }
 
-/* footer-content */
-
-.footer-content {
-  display: flex;
-}
