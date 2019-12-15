@@ -8,8 +8,8 @@ export function changeAppBackground() {
 	fetch(url)
 	.then((res) => res.json())
 	.then((data) => {
-		console.log(data.urls.small) 
-		document.body.style.background = "url("+data.urls.regular+")";
+		console.log(data.urls.full) 
+		document.body.style.background = "url("+data.urls.full+") no-repeat center top / cover";
 	});
 	
 }
