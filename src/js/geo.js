@@ -30,7 +30,7 @@ export function locationSuccess({ coords: { latitude, longitude } }) {
 		})
 		.then(data => {
 			const {temperature, summary, icon } = data.currently;
-			document.getElementById('temperature').innerHTML = `${temperature} F`;
+			document.getElementById('temperature').innerHTML = `${Math.floor(temperature)} F`;
 			document.getElementById('summary').innerHTML = `${summary}`;
 			document.getElementById('timezone').innerHTML = data.timezone;
 			
@@ -50,7 +50,20 @@ export function locationSuccess({ coords: { latitude, longitude } }) {
 				skycons.play();
 				return skycons.set(iconID, Skycons[currentIcon]);
 			}
-			setIcons(icon, document.getElementById('icon'));
+			
+			setIcons(icon, document.getElementById('icon'))
+
+			document.getElementById('first-day-title').innerHTML =  (+dd+1) + '/' + mm + '/' + yyyy;
+			document.getElementById('first-day-average-temp').innerHTML = Math.floor((data.daily.data[1].temperatureMin+data.daily.data[1].temperatureMax)/2) + " F";
+			setIcons(data.daily.data[1].icon, document.getElementById('first-day-icon'));
+			document.getElementById('second-day-title').innerHTML = (+dd+2) + '/' + mm + '/' + yyyy;
+			document.getElementById('second-day-average-temp').innerHTML = Math.floor((data.daily.data[2].temperatureMin+data.daily.data[2].temperatureMax)/2) + " F";
+			setIcons(data.daily.data[2].icon, document.getElementById('second-day-icon'));
+			document.getElementById('third-day-title').innerHTML =  (+dd+3) + '/' + mm + '/' + yyyy;
+			document.getElementById('third-day-average-temp').innerHTML = Math.floor((data.daily.data[3].temperatureMin+data.daily.data[3].temperatureMax)/2) + " F";
+			setIcons(data.daily.data[3].icon, document.getElementById('third-day-icon'));
+			console.log(data.daily.data[1].icon,data.daily.data[2].icon,data.daily.data[3].icon);
+
 			})
 
 	}

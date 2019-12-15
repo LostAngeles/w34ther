@@ -4,7 +4,7 @@
 } 
 
 body {
-  background: url(assets/images/original-wallpaper-.jpg) no-repeat center top / cover;;	
+  background: #ffffff;
   color: black;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
@@ -158,8 +158,16 @@ a {
   font-size: 50px;
 }
 
-#icon img{
-  width: 128px;
+.three-days {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.first-day-average-temp, .second-day-average-temp, .third-day-average-temp {
+  padding: 10px 0px 10px 0px;
+  font-size: 50px;
 }
 
 .geolocation-side {
@@ -184,6 +192,35 @@ a {
   animation: show 3s 1; 
   animation-fill-mode: forwards; 
   animation-delay: 8.5s;
+}
+
+#search-form-box {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(75, 68, 83, 1); 
+  margin-top: 10px;
+  text-align: center;
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 8.8s;
+}
+
+.search-form-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form-button i{
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 8.8s;
+}
+
+#search-form-box::placeholder {
+  color: #ffffff;
 }
 
 .coords {

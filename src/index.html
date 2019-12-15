@@ -56,14 +56,35 @@
 							<div id="current-time">03:00AM</div>						
 						</div>
 						<div>
-							<div id="temperature">12</div>
-							<div id="summary">13</div>
+							<div id="temperature"></div>
+							<div id="summary"></div>
 						</div>
 						<canvas id="icon" width="128" height="128"></canvas>
+					</div>
+					<div class="three-days">
+						<div class="first-day" id="first-day">
+							<div class="first-day-title" id="first-day-title"></div>
+							<div class="first-day-average-temp" id="first-day-average-temp"></div>
+							<canvas id="first-day-icon" width="128" height="128"></canvas>
+						</div>
+						<div class="second-day" id="second-day">
+							<div class="second-day-title" id="second-day-title"></div>
+							<div class="second-day-average-temp" id="second-day-average-temp"></div>
+							<canvas id="second-day-icon" width="128" height="128"></canvas>
+						</div>
+						<div class="third-day" id="third-day">
+							<div class="third-day-title" id="third-day-title"></div>
+							<div class="third-day-average-temp" id="third-day-average-temp"></div>
+							<canvas id="third-day-icon" width="128" height="128"></canvas>
+						</div>
 					</div>
 				</div>				
 				<div class="geolocation-side" id="geolocation-side">
 					<div class="title">Geolocation</div>
+					<form class="example" id="search-form" action="#" onsubmit="nikki()">
+						<input type="search" placeholder="Start searching..." id="search-form-box">
+						<button class="search-form-button" type="submit" id="search-form-button"><i class="fas fa-search-location"></i></button>
+					</form>					
 					<div class="coords">
 						<div id="latitude"></div>
 						<div id="longitude"></div>
@@ -74,5 +95,11 @@
 		</div>
 	</section>	
 
+
+<script>
+	function nikki(argument) {
+		
+	}
+</script>
 </body>
 </html>

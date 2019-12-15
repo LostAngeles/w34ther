@@ -2,8 +2,6 @@ const weatherForecastSide = document.getElementById('weather-forecast-side');
 const geolocationSide = document.getElementById('geolocation-side');
 const topbar = document.getElementById('topbar');
 
-
-
 export function showTopBar() {
     topbar.style.width = '100%';
 }
@@ -23,3 +21,7 @@ export function showTopBar() {
 }
 
  setTimeout(showMainContent, 4000);
+
+export function startSearching() {
+	alert("hello!")
+}

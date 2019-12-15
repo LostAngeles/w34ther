@@ -3,6 +3,7 @@ import "./js/dom.js";
 import "./js/geo.js";
 import "./js/changeAppBackground.js";
 import "./js/current-time.js"; 
+import "./js/startSearching.js"; 
 
 
 const settingsExpand = document.getElementById('settings-expand');
