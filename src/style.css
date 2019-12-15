@@ -4,7 +4,10 @@
 } 
 
 body {
-  background: url(assets/images/original-wallpaper.jpg) no-repeat center top / cover;	
+  background: url(assets/images/original-wallpaper.jpg);	
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   color: black;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 25px;

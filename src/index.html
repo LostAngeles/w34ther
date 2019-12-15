@@ -7,11 +7,16 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
 	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+	
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">	
-	
+
 </head>
-<body>
+<body id="body">
+
+
+	
+
 
 	<header>
 		<div class="container">
@@ -25,7 +30,7 @@
 			<div class="settings-expand" id="settings-expand">
 				<div class="change">
 					<i class="fas fa-redo-alt"></i>
-					<div class="setting-description active">Change background</div>
+					<div class="setting-description active" id="backgroundChange">Change background</div>
 				</div>
 				<div class="change">
 					<i class="fas fa-language"></i>
@@ -52,37 +57,20 @@
 			<div class="weather-content">
 				<div class="weather-forecast-side" id="weather-forecast-side">
 					<div class="title">Weather Data</div>
-				</div>
+					<div id="temperature"></div>
+					<div id="summary"></div>
+				</div>				
 				<div class="geolocation-side" id="geolocation-side">
-					<div class="title">Location Data</div>
+					<div class="title">Geolocation</div>
+					<div>
+						<div id="Longitude"></div>
+						<div id="latitude "></div>
+					</div>
 					<div id="map"></div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<script>
-		navigator.geolocation.getCurrentPosition(locationSuccess);
-
-		let lat;
-		let long;
-
-		function locationSuccess({ coords: { latitude, longitude } }) {		
-			lat = Math.floor(latitude * 100) / 100;
-			long = Math.floor(longitude * 100) / 100;	
-
-			mapboxgl.accessToken = 'pk.eyJ1Ijoibmlra2lodXNreSIsImEiOiJjazQyb2I5emEwMTBqM21wamRyNGFqbjhsIn0.4zKa56yt6D38p-rVO8I-PQ';
-			let map = new mapboxgl.Map({
-			container: 'map', // container id
-			style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-			center: [long, lat], // starting position [lng, lat]
-			zoom: 9 // starting zoom
-		});
-
-
-
-		}
-	</script>
-	<script src="app.js"></script>
+	</section>	
+	
 </body>
 </html>

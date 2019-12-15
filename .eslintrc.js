@@ -14,6 +14,7 @@ module.exports = {
     },
     "plugins": ["prettier"],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-inline-comments": "warn"
     }
 };
