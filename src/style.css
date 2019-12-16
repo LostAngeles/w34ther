@@ -4,7 +4,7 @@
 } 
 
 body {
-  background: #ffffff;
+  background: url(assets/images/original-wallpaper.jpg) no-repeat center top / cover;
   color: black;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
@@ -14,14 +14,10 @@ body {
 h1 {
   font-size: 20px;
   line-height: 20px;
-  padding: 0px;
-  margin: 0px;
 }
 
 a {
   color: inherit;
-  padding: 0px;
-  margin: 0px;
   text-decoration: none;
 }
 
@@ -30,8 +26,6 @@ a {
   width: 100%;
   margin: 0px auto;
 }
-
-/* Topbar Logo & Menu section */
 
 .topbar {
   padding: 5px 0px 10px 0px;
@@ -97,7 +91,7 @@ a {
 }
 
 .active:hover {
-  color: #00FFFF;
+  color: #EC7063;
 }
 
 .active:active {
@@ -105,8 +99,6 @@ a {
   margin-left: 2px;
   padding-right: 8px;
 }
-
-/* weather */
 
 .weather-content {
   padding-top: 30px;
@@ -133,17 +125,17 @@ a {
   opacity: 0;
   animation: show 3s 1; 
   animation-fill-mode: forwards; 
-  animation-delay: 9.5s;
+  animation-delay: 10.5s;
 }
 
-#icon {
+#today-icon {
   opacity: 0;
   animation: show 3s 1; 
   animation-fill-mode: forwards; 
-  animation-delay: 9.5s;
+  animation-delay: 10.5s;
 }
 
-#temperature, #summary {
+#temperature-section, #summary-section {
  opacity: 0;
  animation: show 3s 1; 
  animation-fill-mode: forwards; 
@@ -154,8 +146,12 @@ a {
   background-color: rgba(75, 68, 83, .9);
 }
 
-#temperature {
-  font-size: 50px;
+#summary-section {
+  text-align: center;
+}
+
+#temperature-section {
+  font-size: 70px;
 }
 
 .three-days {
@@ -163,6 +159,10 @@ a {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  opacity: 0;
+  animation: show 3s 1; 
+  animation-fill-mode: forwards; 
+  animation-delay: 10.5s;
 }
 
 .first-day-average-temp, .second-day-average-temp, .third-day-average-temp {
@@ -213,6 +213,7 @@ a {
 }
 
 .search-form-button i{
+  color: #ffffff;
   opacity: 0;
   animation: show 3s 1; 
   animation-fill-mode: forwards; 
@@ -232,7 +233,7 @@ a {
   animation-delay: 9s;
 }
 
-#latitude {
+#latitude-section {
   padding-right: 10px;
 }
 
@@ -247,10 +248,6 @@ a {
   transition: opacity 1s;
 }
 
-.display-flex {
-  display: flex;
-}
-
 @keyframes show {
 
   0% {
@@ -261,4 +258,3 @@ a {
     opacity: 1;
   }
 }
-

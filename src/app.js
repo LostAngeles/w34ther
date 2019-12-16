@@ -5,7 +5,6 @@ import "./js/changeAppBackground.js";
 import "./js/current-time.js"; 
 import "./js/startSearching.js"; 
 
-
 const settingsExpand = document.getElementById('settings-expand');
 const settingsButton = document.getElementById('settings-button');
 settingsButton.onclick = openSettings;
